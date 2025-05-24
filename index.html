@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Resources Repository</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Learning Resources Repository</h1>
+      <input type="text" id="searchBar" placeholder="🔍 Search by title or category..." onkeyup="filterResources()" />
+      <button id="addBtn" onclick="openModal()">➕ Add Resource</button>
+    </header>
+
+    <!-- === Start of resource grid === -->
+    <div class="resource-grid" id="resourceGrid">
+      <!-- Your existing 4 cards -->
+      <div class="card" data-category="Study Materials">
+        <img src="./image/java.jpg" alt="Java" class="card-image">
+        <h3>All java Notes</h3>
+        <p>PDF summary of core concepts in Java.</p>
+        <span class="tag">Study Materials</span>
+        <a href="https://drive.google.com/file/d/19-SfHw7Aw871heu9TN68djIfaCkJFVNz/view?usp=sharing"
+          target="_blank">Download</a>
+      </div>
+
+      <div class="card" data-category="Study Materials">
+        <img src="./image/sql.webp" alt="Java" class="card-image">
+
+        <h3>SQL Notes</h3>
+        <p>Learn SQL in easy way by notes.</p>
+        <span class="tag">Study Materials</span>
+        <a href="https://drive.google.com/drive/folders/14PagQQX3WeV9LMGptaDZJltfSKwaQrBX?usp=drive_link"
+          target="_blank">Download</a>
+      </div>
+
+      <div class="card" data-category="E-Books">
+        <img src="./image/Features_Of_Python_1_f4ccd6d9f7.webp" alt="Java" class="card-image">
+
+        <h3>Python Crash Course</h3>
+        <p>Beginner-friendly Python programming e-book.</p>
+        <span class="tag">E-Books</span>
+        <a href="https://docs.python.org/3/tutorial/index.html" target="_blank">Read Now</a>
+      </div>
+
+      <div class="card" data-category="Lecture Videos">
+        <img src="./image/machine learning.jpg" alt="Java" class="card-image">
+
+        <h3>Machine Learning by Manu gupta</h3>
+        <p>Stanford's famous ML video lectures.</p>
+        <span class="tag">Lecture Videos</span>
+        <a href="https://youtu.be/LvC68w9JS4Y?si=NqhjeuVdwVqjoiY9" target="_blank">Watch</a>
+      </div>
+
+
+      <div class="card" data-category="Lecture Videos">
+        <img src="./image/Data-science-courses.jpg" alt="Java" class="card-image">
+
+        <h3>Learn Data Science</h3>
+        <p>Stanford's famous ML video lectures.</p>
+        <span class="tag">Lecture Videos</span>
+        <a href="https://youtu.be/ua-CiDNNj30?si=uRbJkrFPvyjUMPhJ" target="_blank">Watch</a>
+      </div>
+
+      <div class="card" data-category="Design">
+        <img src="./image/2022-11-16-Figma.jpg" alt="Java" class="card-image">
+
+        <h3>Figma Templates</h3>
+        <p>High-quality UI/UX design templates ready to use for prototyping.</p>
+        <span class="tag">Design</span>
+        <a href="https://www.figma.com/community" target="_blank">Explore Figma</a>
+      </div>
+    </div>
+    <!-- === End of resource grid === -->
+
+  </div>
+
+  <div id="resourceModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Add New Resource</h2>
+      <input type="text" placeholder="Title" />
+      <textarea placeholder="Description"></textarea>
+      <select>
+        <option>Study Materials</option>
+        <option>E-Books</option>
+        <option>Lecture Videos</option>
+      </select>
+      <input type="url" placeholder="Resource URL" />
+      <button>Add</button>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- Place this just inside the <body> tag -->
+  <div class="video-circle sticky-video">
+    <video autoplay muted loop playsinline>
+      <source src="./image/sticky video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
